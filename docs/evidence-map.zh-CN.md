@@ -4,7 +4,7 @@
 
 | 主张 | 可检查的材料 | 可得结论 |
 | --- | --- | --- |
-| 辅助工具可作CPU检查 | scripts/、56项测试、本轮验证报告 | 通过仅限合成输入和mock，不是模型验证 |
+| 辅助工具可作CPU检查 | scripts/、70项共享测试、[本轮验证报告](../reports/distribution-validation.json) | 通过仅限合成输入和mock，不是模型验证 |
 | 上游来源固定 | source-lock.json、公开commit和子模块gitlink | 固定来源，不是完整依赖或权重锁 |
 | 最小安全补丁已交付 | patch、修改后文件hash、MIT许可 | 可检查diff与静态应用，不证明GPU兼容 |
 | 环境契约 | environment-contract.json | 参考栈，未完成构建闭合 |

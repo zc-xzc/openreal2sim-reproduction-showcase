@@ -7,7 +7,7 @@
 1. 明确上游来源与固定commit，登记9个直接子模块gitlink。
 2. 整理默认不执行的分阶段工具、来源与资产校验、结构验收及空白记录模板。
 3. 对4个上游入口提供最小安全补丁，保留原版权和许可。
-4. 建立46项合成CPU测试与CI配置；本轮结果见 [package-validation.json](../reports/package-validation.json)。CI配置存在不代表远端CI已运行。
+4. 建立46项合成CPU测试与CI配置；此前公开候选的56项测试见 [package-validation.json](../reports/package-validation.json)，当前版本对齐的70/82项测试见 [distribution-validation.json](../reports/distribution-validation.json)。CI配置存在不代表远端CI已运行。
 5. 单独整理发布候选，去除个人背景、原始资料、私有运行叙述与Git历史。
 
 GPU重建、真实标注、视频、运动、仿真和新环境冷启动均未由本轮验证。后续应补真实可审查证据，而不是添加“全部完成”标签。

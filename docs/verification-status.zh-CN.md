@@ -6,7 +6,7 @@
 
 本次完成的是“固定源码 + 最小安全补丁 + 可执行辅助工具 + CPU单元测试 + 分阶段手册”。**没有完成 OpenReal2Sim GPU 端到端复现。** 环境/模型锁未闭合，标注、重建、视频、运动、仿真和干净环境重跑均不能标为通过。
 
-## 本次实际执行
+## 早期核心工具验证（历史记录）
 
 2026-11-07 UTC，在 Linux x86_64 云环境，Python 3.12.14、NumPy 2.3.5：
 
@@ -42,7 +42,7 @@ CPU测试覆盖 key/路径与符号链接逃逸、资产 SHA256、空资产、GL
 
 ## 公开候选的证据边界
 
-本候选不包含原始聊天、私人来源或历史实验附件。新增49文件归档已按[证据审查](archive-evidence-review.zh-CN.md)提炼，原件仍不公开。本轮验证仅见 [package-validation.json](../reports/package-validation.json)；旧 [local-validation.json](../reports/local-validation.json) 保留为先前的CPU检查记录，两者均不是GPU实验结果。历史环境与未获得原件的完成叙述不用于填充当前通过项。
+本候选不包含原始聊天、私人来源或历史实验附件。新增49文件归档已按[证据审查](archive-evidence-review.zh-CN.md)提炼，原件仍不公开。当前验证见 [distribution-validation.json](../reports/distribution-validation.json)；[package-validation.json](../reports/package-validation.json) 和 [local-validation.json](../reports/local-validation.json) 分别保留为此前56项与46项CPU检查记录，均不是GPU实验结果。历史环境与未获得原件的完成叙述不用于填充当前通过项。
 
 ## 状态语义
 
@@ -53,6 +53,14 @@ CPU测试覆盖 key/路径与符号链接逃逸、资产 SHA256、空资产、GL
 
 完整目标仍未达成；下一步不是再次整理说明，而是在获准GPU环境完成[执行手册](execution-runbook.zh-CN.md)的依赖/模型闭合与真实新输入验收。
 
-## 本次公开候选补充验证
+## 此前公开候选补充验证（历史记录）
 
-核心46项加新增输入汇总10项，共56项CPU合成测试。本轮另直接复算私有CSV的158/20条记录与候选集合，结果仅限表内一致性。完整结果见 [package-validation.json](../reports/package-validation.json)，不是GPU实验。
+核心46项加新增输入汇总10项，共56项CPU合成测试。当轮另直接复算私有CSV的158/20条记录与候选集合，结果仅限表内一致性。完整结果见 [package-validation.json](../reports/package-validation.json)，不是GPU实验。
+
+## 当前公私版本对齐验证
+
+2026-11-08，本轮公开版70项、私有版82项CPU测试全部通过且无跳过。共享部分为原核心46项、输入汇总10项、版本一致性14项；私有版另有12项个人保全工具的合成测试。
+
+两仓库分别通过完整性/本地链接/JSON/Python语法检查及shell语法检查，48个共享技术文件通过双向逐字节对比。私有工具另实际核验个人保全包的4个原ZIP和167项源文件；原始材料没有上传到任一仓库。公开目录50文件，私有目录65文件，均包含各自SHA256SUMS。
+
+这些新增检查只证明当前工具与资料覆盖边界，不改变GPU、模型锁、标注、视频、仿真、真冷启动的未验证状态。完整记录见 [distribution-validation.json](../reports/distribution-validation.json)。远端状态须在发布后另查，不从本地通过推定。

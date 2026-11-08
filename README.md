@@ -2,18 +2,19 @@
 
 固定上游来源、默认仅输出计划的执行辅助工具、安全入口补丁、结构验收和中文复现手册。
 
-**这是从筛选候选整理的独立公开展示版本。当前验证限于 56 项合成 CPU 工具测试（46项原工具 + 10项输入汇总）与静态检查。GPU 推理、完整环境/模型锁、真实输入、标注交互、视频和仿真均未验证，不能称为完整或离线一键复现。**
+**这是从筛选候选整理的独立公开展示版本。当前验证限于 70 项合成 CPU 工具测试（46项原工具 + 10项输入汇总 + 14项版本一致性）与静态检查。GPU 推理、完整环境/模型锁、真实输入、标注交互、视频和仿真均未验证，不能称为完整或离线一键复现。**
 
 ## 快速检查
 
 ```bash
 python3 -m unittest discover -s tests -v
 python3 scripts/check_repository.py
+python3 scripts/verify_distribution.py
 bash -n scripts/checkout_upstream.sh
 python3 scripts/repro.py run --root /not-used --key demo_image --stage preprocess
 ```
 
-NumPy用于掩码合成测试；CI使用numpy==1.26.3。本轮本地版本见 [验证报告](reports/package-validation.json)。最后一条仅输出计划，不运行上游、不联网、不读取pickle或加载模型。默认不自动安装任何依赖。
+NumPy用于掩码合成测试；CI使用numpy==1.26.3。本轮本地版本见 [本轮验证报告](reports/distribution-validation.json)。最后一条仅输出计划，不运行上游、不联网、不读取pickle或加载模型。默认不自动安装任何依赖。
 
 ## 实现范围
 
@@ -21,7 +22,7 @@ NumPy用于掩码合成测试；CI使用numpy==1.26.3。本轮本地版本见 [�
 - 4文件安全补丁：标注器默认本地监听及显式share开关、重建/运动入口拒绝无效阶段、仿真脚本规范失败退出。
 - 明确阶段命令、前置检查、可信pickle门禁、路径约束、资产hash校验、环境版本记录与逐次运行报告。
 - 预处理文件、掩码、scene.json引用和GLB结构检查。结构合格不等于几何/物理合格。
-- 46项核心合成CPU测试及10项输入汇总测试，不涉及模型推理、真实个人数据或GPU。
+- 46项核心合成CPU测试、10项输入汇总测试及14项版本一致性测试，不涉及模型推理、真实个人数据或GPU。
 
 ## 新增的工程案例与证据
 
@@ -29,6 +30,10 @@ NumPy用于掩码合成测试；CI使用numpy==1.26.3。本轮本地版本见 [�
 - [逐项证据审查](docs/archive-evidence-review.zh-CN.md)：49个来源文件的取舍及11条主张映射。
 - [输入记录复算](docs/input-record-validation.zh-CN.md)：158条记录、20条候选的匿名聚合，不是重建成功率。
 - [冷启动验收协议](docs/cold-start-acceptance.zh-CN.md)：当前环境自检、旧产物可读、真冷启动、新输入复跑分别验收。
+
+## 版本完整性
+
+[公私版本与个人原件的分工](docs/version-pair-guide.zh-CN.md)明确每类资料的去向。共享技术文件可通过[同步契约](reports/distribution-contract.json)和本地对比工具检查；原始私人材料不进入公开仓库。四份原始 ZIP 的完整保全不等于模型和端到端复现已经完整。
 
 ## 文档
 

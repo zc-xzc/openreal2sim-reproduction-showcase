@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-08T05:05:56.858808+00:00",
+  "scope": "Current sanitized distribution reconciliation; CPU tools and byte coverage only, not GPU reproduction",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "platform": "Linux x86_64"
+  },
+  "local_tests": {
+    "public": {
+      "run": 70,
+      "passed": 70,
+      "skipped": 0
+    },
+    "private": {
+      "run": 82,
+      "passed": 82,
+      "skipped": 0
+    },
+    "shared_core": 70,
+    "private_preservation_synthetic": 12
+  },
+  "coverage": {
+    "public_files_including_manifest": 50,
+    "private_files_including_manifest": 65,
+    "shared_files_compared": 48,
+    "original_upload_archives_verified": 4,
+    "source_entries_verified": 167,
+    "unique_source_payloads": 107,
+    "conversation_archive_entries": 53,
+    "unique_conversation_source_payloads": 52,
+    "prior_private_documents_retained": 10
+  },
+  "checks": {
+    "shared_byte_parity": "passed bidirectionally",
+    "repository_checksums_links_json_python": "passed in both versions",
+    "checkout_shell_syntax": "passed in both versions",
+    "dry_run": "plan only in both versions",
+    "personal_preservation_zip_hash": "passed locally, hash not published here",
+    "original_source_content_checks": "4 original ZIPs and 167 entries passed locally",
+    "original_archive_instructions": "not executed",
+    "license_citations": "seven pinned license links checked; no new license granted"
+  },
+  "publication_boundary": {
+    "public": "sanitized technical payload only",
+    "private": "same technical payload plus sanitized index and superseded historical notes",
+    "raw_originals": "retained in separate personal preservation attachment, not uploaded to either repository"
+  },
+  "remote_state": "This file records local validation. Confirm the resulting GitHub commit and its CI separately after publication.",
+  "not_verified": [
+    "Complete environment and immutable model locks",
+    "Recovery of final historical compatibility patches",
+    "GPU inference and full reconstruction",
+    "Real input image-byte quality and permission",
+    "Annotation interaction and save/reload",
+    "Video and motion",
+    "Simulation and physics acceptance",
+    "Fresh-environment new-input cold start"
+  ],
+  "limits": [
+    "Shared path presence without --peer does not verify the other checkout.",
+    "Hash equality does not prove experiment truth, privacy clearance or license clearance.",
+    "Earlier local-validation.json and package-validation.json remain dated historical reports.",
+    "Private history is explicitly marked superseded and is not a current success claim."
+  ]
+}

@@ -21,5 +21,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           python scripts/check_repository.py
+          python scripts/verify_distribution.py
           bash -n scripts/checkout_upstream.sh
           python scripts/repro.py run --root /not-used --key demo_image --stage preprocess
