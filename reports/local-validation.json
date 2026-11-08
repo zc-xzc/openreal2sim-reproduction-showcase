@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-07",
+  "scope": "reproduction_harness_cpu_only",
+  "environment": {"os":"linux","architecture":"x86_64","python":"3.12.14","numpy":"2.3.5","nvidia_smi_available":false,"docker_available":false,"torch_installed":false},
+  "unit_tests": {"command":"python -m unittest discover -s tests -v","passed":46,"failed":0,"skipped":0,"exit_code":0,"fixtures":"synthetic local files and mocked subprocesses"},
+  "patch": {"source_commit":"8f69a19e5dfdfe0aad906fdacad0decf862a7adf","files":4,"apply_check":"passed","python_ast_files":3,"python_ast":"passed","shell_syntax":"passed","upstream_import_or_execution":false},
+  "source_excerpt_git_blob_hashes_verified":15,
+  "checkout_shell_syntax":"passed",
+  "dry_run":"passed_no_upstream_execution",
+  "gpu_preflight":{"status":"failed_as_expected","exit_code":1,"reasons":["no NVIDIA runtime available","no Torch or complete GPU dependencies","Python 3.12 differs from 3.10 reference","read-only source excerpts are not a complete pinned Git checkout"]},
+  "end_to_end":{"environment_build":"not_run","model_download":"not_run","preprocess":"not_run","annotation":"not_run","reconstruction":"not_run","motion":"not_run","simulation":"not_run","cold_start":"not_run"},
+  "disclaimer":"Passing harness tests is not successful OpenReal2Sim reproduction. Remote CI must be checked for the exact published commit."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "upstream_reference_not_a_resolved_environment_lock",
+  "source_commit": "8f69a19e5dfdfe0aad906fdacad0decf862a7adf",
+  "upstream_docker_reference": {
+    "base": "nvidia/cuda:11.8.0-devel-ubuntu22.04",
+    "base_digest": null,
+    "python": "3.10",
+    "torch": "2.5.1+cu118",
+    "torchvision": "0.20.1+cu118",
+    "torchaudio": "2.5.1+cu118"
+  },
+  "known_source_pins": {
+    "MoGe": "72fdee98935d93b69f7ce0a1369cfd6e2573fc2f",
+    "nvdiffrast": "abb07ca0358f3a21c3942b50c54aa1eacd329af9"
+  },
+  "unresolved": [
+    "Immutable base image digest and OS package snapshot",
+    "Complete Python transitive dependency resolution and hashes",
+    "PyTorch3D and chumpy source revisions",
+    "GPU driver, CUDA build compatibility and native extension runtime tests",
+    "Model snapshot revisions, file hashes and applicable license acceptance",
+    "Gradio/Supervision/Pandas callback compatibility under actual GPU inference"
+  ],
+  "historical_pandas_fix": {
+    "version": "2.2.3",
+    "status": "assistant_proposed_not_user_confirmed",
+    "instruction": "Do not mistake this single-package workaround for a tested environment lock."
+  }
+}

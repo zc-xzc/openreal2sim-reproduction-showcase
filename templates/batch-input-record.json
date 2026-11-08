@@ -1,0 +1,43 @@
+{
+  "record_kind": "template",
+  "schema_version": "1.0",
+  "evidence_kind": "not_run",
+  "batch_id": null,
+  "screening_method_version": null,
+  "source_count": null,
+  "technical_candidate_count": null,
+  "human_reviewed_count": null,
+  "run_count": null,
+  "samples": [
+    {
+      "sample_id": null,
+      "input_sha256": null,
+      "media_type": null,
+      "dimensions": null,
+      "usage_permission": "not_reviewed",
+      "redistribution_permission": "not_reviewed",
+      "technical_checks": {
+        "decodable": null,
+        "duplicate_check": "not_run",
+        "blur_review": "not_run",
+        "exposure_review": "not_run"
+      },
+      "semantic_review": {
+        "reviewed": false,
+        "subject_clear": null,
+        "support_surface_visible": null,
+        "occlusion_acceptable": null,
+        "material_risks": [],
+        "decision": "pending_review",
+        "reason": null
+      },
+      "mask_saved_and_reopened": null,
+      "run_id": null,
+      "reconstruction_status": "not_run",
+      "geometry_check_status": "not_run",
+      "simulation_check_status": "not_run"
+    }
+  ],
+  "notes": "Use anonymous IDs. Do not include original personal filenames, private paths, faces, location metadata or private source URLs in a public record."
+}
+

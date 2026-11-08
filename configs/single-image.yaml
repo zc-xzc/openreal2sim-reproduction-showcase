@@ -1,0 +1,16 @@
+# Copy deliberately to upstream config/config.yaml after backing up your own config.
+# Input: data/demo_image.jpg. No claim that generated depth is metric ground truth.
+keys:
+  - demo_image
+global:
+  preprocess:
+    fps: 25
+    quality: 1
+    resize: 1
+    gpu: "0"
+    depth_refinement: true
+  reconstruction:
+    gpu: "0"
+  simulation:
+    physics: default
+local: {}

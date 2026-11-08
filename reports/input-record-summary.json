@@ -1,0 +1,26 @@
+{
+  "scope": "CSV records only; no image-byte or reconstruction validation",
+  "manifest_rows": 158,
+  "candidate_rows": 20,
+  "unique_nonempty_manifest_keys": 158,
+  "unique_nonempty_candidate_keys": 20,
+  "empty_manifest_keys": 0,
+  "empty_candidate_keys": 0,
+  "duplicate_manifest_key_rows": 0,
+  "duplicate_candidate_key_rows": 0,
+  "candidate_keys_missing_from_manifest": 0,
+  "candidate_keys_equal_selected_yes_keys": true,
+  "selected_flags": {
+    "NO": 138,
+    "YES": 20
+  },
+  "image_formats_from_metadata": {
+    "JPEG": 152,
+    "PNG": 6
+  },
+  "invalid_score_rows": 0,
+  "invalid_dimension_rows": 0,
+  "declared_score_min": 38.0,
+  "declared_score_max": 100.0,
+  "privacy": "No source names, paths, per-image identifiers, reasons, thumbnails, or EXIF are emitted"
+}

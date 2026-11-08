@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "sources_only_not_a_weight_lock",
+  "redistribute_weights": false,
+  "models": [
+    {"stage":"image_depth","source":"https://huggingface.co/Ruicheng/moge-2-vitl-normal","revision":null,"sha256":null},
+    {"stage":"annotation","source":"https://huggingface.co/IDEA-Research/grounding-dino-base","revision":null,"sha256":null},
+    {"stage":"annotation","source":"https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt","relative_target":"third_party/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt","sha256":null},
+    {"stage":"background_inpaint","source":"https://huggingface.co/jixin0101/ObjectClear","revision":null,"sha256":null},
+    {"stage":"object_mesh","source":"https://huggingface.co/tencent/Hunyuan3D-2","subfolders":["hunyuan3d-dit-v2-0-turbo","hunyuan3d-paint-v2-0"],"revision":null,"sha256":null},
+    {"stage":"foundationpose","source":"https://huggingface.co/datasets/licesma/foundationpose_weights","revision":null,"sha256":null},
+    {"stage":"video_depth","source":"https://huggingface.co/spaces/LiheYoung/Depth-Anything","file":"checkpoints/depth_anything_vitl14.pth","revision":null,"sha256":null},
+    {"stage":"video_flow","source":"https://huggingface.co/datasets/licesma/raft_things","file":"raft-things.pth","revision":null,"sha256":null},
+    {"stage":"video_tracking","relative_target":"third_party/mega-sam/checkpoints/megasam_final.pth","source":null,"revision":null,"sha256":null,"status":"provisioning_gap_in_upstream_installer"},
+    {"stage":"motion","source":"https://huggingface.co/spaces/rolpotamias/WiLoR","revision":null,"sha256":null},
+    {"stage":"motion","source":"https://huggingface.co/adithyamurali/GraspGenModels","revision":null,"sha256":null},
+    {"stage":"motion","source":"https://mano.is.tue.mpg.de/","revision":null,"sha256":null,"status":"separate_license_and_manual_acquisition"},
+    {"stage":"optional_sam3d","source":"https://huggingface.co/licesma/sam-3d-objects-weights","revision":null,"sha256":null}
+  ],
+  "warning":"Sources transcribed from pinned upstream code. Availability, ownership, terms and exact file bytes were not independently downloaded or validated. This is not an exhaustive recursive asset list."
+}

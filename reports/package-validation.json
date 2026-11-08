@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-08T04:24:39.875496+00:00",
+  "scope": "Public candidate revision: synthetic CPU and source-record review only, not GPU reproduction",
+  "environment": {
+    "platform": "Linux x86_64",
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "unittest": {
+    "tests": 56,
+    "passed": 56,
+    "skipped": 0,
+    "original_harness": 46,
+    "new_aggregate_parser": 10
+  },
+  "checks": {
+    "unit_tests": "passed",
+    "checkout_shell_syntax": "passed",
+    "dry_run": "passed",
+    "safety_patch_clean_application": "passed",
+    "patched_hashes_ast_shell": "passed",
+    "source_review_coverage": "49/49 classified",
+    "claims_mapping": "11 claims with line bounds checked",
+    "private_csv_recalculation": "158 manifest / 20 candidates; key sets consistent",
+    "public_source_identifier_scan": "no findings",
+    "public_raw_source_hash_or_filename_leak": "no findings",
+    "no_git_history_or_symlinks_or_original_binary_assets": "passed"
+  },
+  "not_run": [
+    "GPU inference",
+    "Dependency/container build",
+    "Model download and lock closure",
+    "Original compatibility patch recovery",
+    "Real image-byte validation",
+    "Annotation interaction",
+    "Full reconstruction",
+    "Video/motion",
+    "Simulation",
+    "Clean-environment end-to-end rerun"
+  ],
+  "limits": [
+    "A terminal paste is historical evidence, not independently rerun execution.",
+    "All raw source attachments are excluded from this public working tree.",
+    "Pattern scanning and source mapping are not a universal guarantee against all possible private information.",
+    "The original 46-test record remains in local-validation.json as a prior report."
+  ],
+  "remote_state": "No repository writes or visibility changes performed by this packaging task"
+}

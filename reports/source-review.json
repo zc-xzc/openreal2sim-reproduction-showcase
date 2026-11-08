@@ -1,0 +1,391 @@
+{
+  "scope": "49 source files reviewed for selective public reuse; this is not a full backup",
+  "source_file_count": 49,
+  "counts": {
+    "excluded": 35,
+    "technical_summary_only": 12,
+    "aggregate_only": 2
+  },
+  "items": [
+    {
+      "source_id": "S01",
+      "category": "archive_metadata_or_summary",
+      "public_treatment": "excluded",
+      "reason": "只用于理解资料范围；原始归档及背景不公开",
+      "related_claims": []
+    },
+    {
+      "source_id": "S02",
+      "category": "archive_metadata_or_summary",
+      "public_treatment": "excluded",
+      "reason": "只用于理解资料范围；原始归档及背景不公开",
+      "related_claims": []
+    },
+    {
+      "source_id": "S03",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S04",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S05",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S06",
+      "category": "project_report",
+      "public_treatment": "technical_summary_only",
+      "reason": "去除身份及环境标识；审查矛盾，不照抄成功总括",
+      "related_claims": [
+        "C04",
+        "C05",
+        "C11"
+      ]
+    },
+    {
+      "source_id": "S07",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S08",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S09",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S10",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S11",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S12",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S13",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": []
+    },
+    {
+      "source_id": "S14",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S15",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S16",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S17",
+      "category": "project_report",
+      "public_treatment": "technical_summary_only",
+      "reason": "去除身份及环境标识；审查矛盾，不照抄成功总括",
+      "related_claims": [
+        "C04"
+      ]
+    },
+    {
+      "source_id": "S18",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S19",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S20",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S21",
+      "category": "project_sop",
+      "public_treatment": "technical_summary_only",
+      "reason": "环境专用假设与危险恢复命令不转入可执行步骤",
+      "related_claims": [
+        "C09"
+      ]
+    },
+    {
+      "source_id": "S22",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S23",
+      "category": "archive_template",
+      "public_treatment": "excluded",
+      "reason": "归档辅助模板与项目技术实现无关，再分发授权未核实",
+      "related_claims": []
+    },
+    {
+      "source_id": "S24",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S25",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S26",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C05",
+        "C07",
+        "C08"
+      ]
+    },
+    {
+      "source_id": "S27",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C01"
+      ]
+    },
+    {
+      "source_id": "S28",
+      "category": "project_report",
+      "public_treatment": "technical_summary_only",
+      "reason": "去除身份及环境标识；审查矛盾，不照抄成功总括",
+      "related_claims": [
+        "C04"
+      ]
+    },
+    {
+      "source_id": "S29",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S30",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S31",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S32",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S33",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C02",
+        "C08"
+      ]
+    },
+    {
+      "source_id": "S34",
+      "category": "input_record_csv",
+      "public_treatment": "aggregate_only",
+      "reason": "只保留数量及关联检查，不公开原路径或逐图身份",
+      "related_claims": [
+        "C10"
+      ]
+    },
+    {
+      "source_id": "S35",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S36",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C02",
+        "C03"
+      ]
+    },
+    {
+      "source_id": "S37",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S38",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S39",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S40",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S41",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S42",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S43",
+      "category": "unrelated_detection_metrics",
+      "public_treatment": "excluded",
+      "reason": "未建立与OpenReal2Sim重建验证的直接关联",
+      "related_claims": []
+    },
+    {
+      "source_id": "S44",
+      "category": "screenshot_or_photo",
+      "public_treatment": "excluded",
+      "reason": "可能含身份、环境信息、场景或第三方内容；本次不作为公开证据",
+      "related_claims": []
+    },
+    {
+      "source_id": "S45",
+      "category": "input_record_csv",
+      "public_treatment": "aggregate_only",
+      "reason": "只保留数量及关联检查，不公开原路径或逐图身份",
+      "related_claims": [
+        "C10"
+      ]
+    },
+    {
+      "source_id": "S46",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C01"
+      ]
+    },
+    {
+      "source_id": "S47",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C01"
+      ]
+    },
+    {
+      "source_id": "S48",
+      "category": "terminal_or_conversation_record",
+      "public_treatment": "technical_summary_only",
+      "reason": "区分终端记录与历史建议；去除私人环境与未经验证的主张",
+      "related_claims": [
+        "C03",
+        "C05",
+        "C06",
+        "C08"
+      ]
+    },
+    {
+      "source_id": "S49",
+      "category": "archive_metadata_or_summary",
+      "public_treatment": "excluded",
+      "reason": "只用于理解资料范围；原始归档及背景不公开",
+      "related_claims": []
+    }
+  ],
+  "raw_source_filenames_paths_hashes_and_dates": "not included; held in the owner-only review",
+  "images": "All 23 bitmaps excluded. Their pixels are not used to support the new public claims."
+}

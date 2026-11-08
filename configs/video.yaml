@@ -1,0 +1,15 @@
+# Distinct from a static single-image export; verify camera calibration and motion.
+keys:
+  - demo_video
+global:
+  preprocess:
+    fps: 25
+    quality: 1
+    resize: 0.5
+    gpu: "0"
+    depth_refinement: true
+  reconstruction:
+    gpu: "0"
+  simulation:
+    physics: default
+local: {}

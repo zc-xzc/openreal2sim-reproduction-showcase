@@ -1,0 +1,110 @@
+{
+  "record_kind": "template",
+  "evidence_kind": "not_run",
+  "run_id": null,
+  "upstream_repository": "https://github.com/PointsCoder/OpenReal2Sim",
+  "upstream_commit": null,
+  "submodule_commits": {},
+  "patch_sha256": null,
+  "image_digest": null,
+  "input": {
+    "source_kind": null,
+    "sha256": null,
+    "redistribution_permission": "not_reviewed"
+  },
+  "environment": {
+    "gpu_model": null,
+    "python_version": null,
+    "torch_version": null,
+    "cuda_version": null
+  },
+  "stages": [
+    {
+      "name": "preprocess",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "segmentation",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "mask_propagation",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "background_pixel_inpainting",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "background_point_inpainting",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "background_mesh_generation",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "object_mesh_generation",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "scenario_construction",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "scenario_fdpose_optimization",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "scenario_collision_optimization",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    },
+    {
+      "name": "simulator_validation",
+      "status": "not_run",
+      "exit_code": null,
+      "duration_seconds": null,
+      "reason": null
+    }
+  ],
+  "artifacts": [],
+  "validation": {
+    "fresh_container": null,
+    "new_input_end_to_end": null,
+    "human_mask_review": null,
+    "geometry_quality_checked": null,
+    "physics_checked": null
+  },
+  "notes": null
+}
+

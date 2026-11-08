@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "upstream": {
+    "url": "https://github.com/PointsCoder/OpenReal2Sim.git",
+    "commit": "8f69a19e5dfdfe0aad906fdacad0decf862a7adf"
+  },
+  "submodules": [
+    {
+      "path": "third_party/FoundationPose",
+      "url": "https://github.com/PointsCoder/FoundationPose.git",
+      "commit": "59df9f028941353e60993eb46be06ae92d0f2534"
+    },
+    {
+      "path": "third_party/GraspGen",
+      "url": "https://github.com/DynamoDuan/GraspGen.git",
+      "commit": "9fbacb100f6e6afb31cae0db3c1ae0c0ca5ae6dc"
+    },
+    {
+      "path": "third_party/Grounded-SAM-2",
+      "url": "https://github.com/PointsCoder/Grounded-SAM-2.git",
+      "commit": "13683a85d287b0c12a6d2a504e034206da29bb6b"
+    },
+    {
+      "path": "third_party/Hunyuan3D-2",
+      "url": "https://github.com/PointsCoder/Hunyuan3D-2.git",
+      "commit": "3b9a1515e1b2d97cd7ede51d7fcc5ada8617012a"
+    },
+    {
+      "path": "third_party/ObjectClear",
+      "url": "https://github.com/PointsCoder/ObjectClear.git",
+      "commit": "5195da65eb52097d6ca7cbced8143322dddd72de"
+    },
+    {
+      "path": "third_party/PromptDA",
+      "url": "https://github.com/dynamoduan/PromptDA.git",
+      "commit": "35d56b41bfbf7fb00a6d8f180ee96ca3a2e5cabc"
+    },
+    {
+      "path": "third_party/WiLoR",
+      "url": "https://github.com/DynamoDuan/WiLoR.git",
+      "commit": "1936830a63d32629665a03ec038310f3a9b09772"
+    },
+    {
+      "path": "third_party/mega-sam",
+      "url": "https://github.com/PointsCoder/mega-sam.git",
+      "commit": "87b30cecdfbf2543ca6c50987651d8eef9977760"
+    },
+    {
+      "path": "third_party/sam-3d-objects",
+      "url": "https://github.com/licesma/sam-3d-objects.git",
+      "commit": "922aa11f79e05d26034d1ad53b416afbccaeff3f"
+    }
+  ],
+  "scope": "Direct gitlinks pinned. Recursive gitlinks checked against each parent's recorded commits; complete transitive Python/container/model lock is not available.",
+  "patched_files": {
+    "openreal2sim/reconstruction/tools/segmentation_annotator.py": "bcf2db4b3e27a49301a71d351e8f4a39b5a25ea11973786d77a21065d60a536e",
+    "openreal2sim/reconstruction/recon_agent.py": "eaa6a1cbc24e70e04c7bda7aa6306826036d9d8e3594103f4321fb62e8fd19cf",
+    "openreal2sim/motion/motion_manager.py": "fa5c6ed0649c872b7b8f508981ed2776e096450cb5f2a6dbe9226c4ab9258cd8",
+    "openreal2sim/simulation/isaaclab/demo/sim_agent.sh": "92861619e1f104574d7833fbe9054dff1efacdf8d29492071884aee5f725af25"
+  }
+}

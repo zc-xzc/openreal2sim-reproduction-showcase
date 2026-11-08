@@ -1,0 +1,328 @@
+{
+  "scope": "Anonymized provenance references only; original source files are not distributed",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "finding": "安装成功信息与依赖冲突/实际导入失败可以同时出现",
+      "evidence_type": "pasted_terminal_record",
+      "refs": [
+        {
+          "source_id": "S27",
+          "lines": [
+            119,
+            123
+          ]
+        },
+        {
+          "source_id": "S47",
+          "lines": [
+            11,
+            49
+          ]
+        },
+        {
+          "source_id": "S46",
+          "lines": [
+            21,
+            41
+          ]
+        },
+        {
+          "source_id": "S46",
+          "lines": [
+            159,
+            166
+          ]
+        }
+      ],
+      "public_conclusion": "检查解释器、模块实际来源、导入及依赖一致性，不能只看pip最后一行",
+      "excluded_claim": "不存在已闭合环境的证据"
+    },
+    {
+      "claim_id": "C02",
+      "finding": "历史记录描述阶段恢复、快速配置和无缓冲日志",
+      "evidence_type": "historical_assistant_narrative_and_instruction",
+      "refs": [
+        {
+          "source_id": "S33",
+          "lines": [
+            920,
+            1008
+          ]
+        },
+        {
+          "source_id": "S36",
+          "lines": [
+            21,
+            40
+          ]
+        }
+      ],
+      "public_conclusion": "将启动、状态检查、恢复入口和验收分开记录",
+      "excluded_claim": "不发布未经受控验证的加速比或复杂度断言"
+    },
+    {
+      "claim_id": "C03",
+      "finding": "历史兼容路径跳过FoundationPose，改用registered网格并允许缺省轨迹",
+      "evidence_type": "historical_code_discussion_and_report",
+      "refs": [
+        {
+          "source_id": "S36",
+          "lines": [
+            213,
+            302
+          ]
+        },
+        {
+          "source_id": "S36",
+          "lines": [
+            367,
+            436
+          ]
+        },
+        {
+          "source_id": "S48",
+          "lines": [
+            670,
+            773
+          ]
+        }
+      ],
+      "public_conclusion": "只作降级路径案例；需要标记skipped及下游缺失",
+      "excluded_claim": "不计完整8阶段完成，不视为原算法等价或已恢复补丁"
+    },
+    {
+      "claim_id": "C04",
+      "finding": "报告总括8/8完成与阶段表的FoundationPose跳过矛盾",
+      "evidence_type": "contradiction_in_report_files",
+      "refs": [
+        {
+          "source_id": "S28",
+          "lines": [
+            65,
+            66
+          ]
+        },
+        {
+          "source_id": "S28",
+          "lines": [
+            121,
+            126
+          ]
+        },
+        {
+          "source_id": "S17",
+          "lines": [
+            65,
+            66
+          ]
+        },
+        {
+          "source_id": "S17",
+          "lines": [
+            121,
+            126
+          ]
+        },
+        {
+          "source_id": "S06",
+          "lines": [
+            65,
+            87
+          ]
+        },
+        {
+          "source_id": "S06",
+          "lines": [
+            128,
+            135
+          ]
+        }
+      ],
+      "public_conclusion": "采用逐阶段状态，不沿用全部完成总括",
+      "excluded_claim": "没有独立GPU重跑"
+    },
+    {
+      "claim_id": "C05",
+      "finding": "冷启动标题强于正文，正文仍列新镜像新容器复核待做",
+      "evidence_type": "contradiction_in_report_and_narrative",
+      "refs": [
+        {
+          "source_id": "S06",
+          "lines": [
+            251,
+            266
+          ]
+        },
+        {
+          "source_id": "S06",
+          "lines": [
+            358,
+            364
+          ]
+        },
+        {
+          "source_id": "S48",
+          "lines": [
+            882,
+            919
+          ]
+        },
+        {
+          "source_id": "S26",
+          "lines": [
+            440,
+            451
+          ]
+        }
+      ],
+      "public_conclusion": "只能称当前容器自检记录或候选镜像准备；真正冷启动尚未建立证据",
+      "excluded_claim": "不称已完成新镜像冷启动"
+    },
+    {
+      "claim_id": "C06",
+      "finding": "历史冷启动检查存在输出字符串比较导致的假阴性",
+      "evidence_type": "historical_diagnostic_narrative",
+      "refs": [
+        {
+          "source_id": "S48",
+          "lines": [
+            513,
+            533
+          ]
+        },
+        {
+          "source_id": "S48",
+          "lines": [
+            160,
+            187
+          ]
+        }
+      ],
+      "public_conclusion": "使用退出码判定；语法检查、非空、hash和行为检查分开",
+      "excluded_claim": "不照搬旧验证脚本作为已验证实现"
+    },
+    {
+      "claim_id": "C07",
+      "finding": "核心包错误未计入总失败、版本检查无条件PASS以及计数口径变化",
+      "evidence_type": "historical_diagnostic_and_revision_narrative",
+      "refs": [
+        {
+          "source_id": "S26",
+          "lines": [
+            198,
+            227
+          ]
+        },
+        {
+          "source_id": "S26",
+          "lines": [
+            294,
+            332
+          ]
+        },
+        {
+          "source_id": "S26",
+          "lines": [
+            367,
+            374
+          ]
+        }
+      ],
+      "public_conclusion": "错误应传播到最终退出码，并做故障注入；8与9项不可直接比较",
+      "excluded_claim": "只grep ERR不能保证捕获崩溃和所有非零退出"
+    },
+    {
+      "claim_id": "C08",
+      "finding": "环境恢复需要核对系统图形库、Torch实际动态库位置和可选模块范围",
+      "evidence_type": "historical_diagnostic_narrative",
+      "refs": [
+        {
+          "source_id": "S33",
+          "lines": [
+            438,
+            446
+          ]
+        },
+        {
+          "source_id": "S48",
+          "lines": [
+            367,
+            395
+          ]
+        },
+        {
+          "source_id": "S26",
+          "lines": [
+            185,
+            192
+          ]
+        }
+      ],
+      "public_conclusion": "分别验收系统/Python/编译扩展/数据挂载，并限定模块范围",
+      "excluded_claim": "不公开历史绝对路径，不宣称所有动态链接均无缺失"
+    },
+    {
+      "claim_id": "C09",
+      "finding": "SOP包含固定环境假设、自动跳过姿态精修、旧mask路径和覆盖恢复操作",
+      "evidence_type": "historical_sop_text",
+      "refs": [
+        {
+          "source_id": "S21",
+          "lines": [
+            129,
+            154
+          ]
+        },
+        {
+          "source_id": "S21",
+          "lines": [
+            177,
+            205
+          ]
+        }
+      ],
+      "public_conclusion": "保留流程思路，使用当前固定上游核验后的手册，不照抄旧命令",
+      "excluded_claim": "不恢复未知兼容补丁，不执行覆盖/删除命令"
+    },
+    {
+      "claim_id": "C10",
+      "finding": "两份CSV分别有158和20条数据记录；键唯一且候选集合等于YES集合",
+      "evidence_type": "current_csv_byte_analysis",
+      "refs": [
+        {
+          "source_id": "S45",
+          "lines": [
+            1,
+            159
+          ]
+        },
+        {
+          "source_id": "S34",
+          "lines": [
+            1,
+            21
+          ]
+        }
+      ],
+      "public_conclusion": "仅证明表内记录和关联一致；公开聚合统计与通用复算脚本",
+      "excluded_claim": "不证明158张原图存在、不证明评分有效、不证明任何重建成功"
+    },
+    {
+      "claim_id": "C11",
+      "finding": "报告列有历史补丁、环境包和场景资产名，但归档没有这些独立二进制原件",
+      "evidence_type": "archive_inventory_and_report_text",
+      "refs": [
+        {
+          "source_id": "S06",
+          "lines": [
+            301,
+            324
+          ]
+        }
+      ],
+      "public_conclusion": "将报告中提及的资产与实际随包交付文件区分",
+      "excluded_claim": "不能宣称完整历史环境、模型缓存或最终补丁已恢复"
+    }
+  ]
+}

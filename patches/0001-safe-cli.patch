@@ -1,0 +1,81 @@
+diff --git a/openreal2sim/motion/motion_manager.py b/openreal2sim/motion/motion_manager.py
+index bfd436f..cff1629 100644
+--- a/openreal2sim/motion/motion_manager.py
++++ b/openreal2sim/motion/motion_manager.py
+@@ -40,7 +40,7 @@ class MotionAgent:
+                 start_idx = self.stages.index(stage)
+                 self.stages = self.stages[start_idx:]
+             else:
+-                print(f"[Warning] Stage '{stage}' not found. It must be one of {self.stages}. Running all stages by default.")
++                raise ValueError(f"Invalid stage {stage!r}; expected one of {self.stages}")
+         print('[Info] MotionAgent initialized.')
+     
+     def save_scene_dicts(self):
+@@ -84,7 +84,7 @@ class MotionAgent:
+ 
+ if __name__ == '__main__':
+     args = argparse.ArgumentParser()
+-    args.add_argument('--stage', type=str, default=None, help='Starting from a certain stage')
++    args.add_argument('--stage', type=str, default=None, choices=['hand_extraction', 'demo_motion_process', 'grasp_point_extraction', 'grasp_generation'], help='Starting from a certain stage')
+     args.add_argument('--key', type=str, default=None, help='Process a single key instead of all keys from config')
+     args = args.parse_args()
+ 
+diff --git a/openreal2sim/reconstruction/recon_agent.py b/openreal2sim/reconstruction/recon_agent.py
+index d37d1d0..d956602 100644
+--- a/openreal2sim/reconstruction/recon_agent.py
++++ b/openreal2sim/reconstruction/recon_agent.py
+@@ -39,7 +39,7 @@ class ReconAgent:
+                 start_idx = self.stages.index(stage)
+                 self.stages = self.stages[start_idx:]
+             else:
+-                print(f"[Warning] Stage '{stage}' not found. It must be one of the {self.stages}. Running all stages by default.")
++                raise ValueError(f"Invalid stage {stage!r}; expected one of {self.stages}")
+         print('[Info] ReconAgent initialized.')
+     
+     def save_scene_dicts(self):
+@@ -167,7 +167,7 @@ class ReconAgent:
+ 
+ if __name__ == '__main__':
+     parser = argparse.ArgumentParser()
+-    parser.add_argument('--stage', type=str, default=None, help='Starting from a certain stage')
++    parser.add_argument('--stage', type=str, default=None, choices=['mask_propagation', 'background_pixel_inpainting', 'background_point_inpainting', 'background_mesh_generation', 'object_mesh_generation', 'scenario_construction', 'scenario_fdpose_optimization', 'scenario_collision_optimization'], help='Starting from a certain stage')
+     parser.add_argument('--key', type=str, default=None, help='Process a single key instead of all keys from config')
+     parser.add_argument('--label', type=str, default=None, help='Optional label for notifications')
+     parser.add_argument('--use-sam', action='store_true', help='Use SAM-3D for object mesh generation (runs in sam3d container)')
+diff --git a/openreal2sim/reconstruction/tools/segmentation_annotator.py b/openreal2sim/reconstruction/tools/segmentation_annotator.py
+index 1e65b29..9870ec0 100644
+--- a/openreal2sim/reconstruction/tools/segmentation_annotator.py
++++ b/openreal2sim/reconstruction/tools/segmentation_annotator.py
+@@ -359,9 +359,10 @@ if __name__=="__main__":
+     import argparse, os
+     ap=argparse.ArgumentParser()
+     ap.add_argument("--key",type=str,default="")
+-    ap.add_argument("--share",type=bool,default=True)
++    ap.add_argument("--share", action="store_true", default=False)
++    ap.add_argument("--server-name", type=str, default="127.0.0.1")
+     ap.add_argument("--port",type=int,default=7860)
+     args=ap.parse_args()
+ 
+     if args.key: key_in.value=args.key
+-    demo.launch(share=args.share,server_port=args.port,server_name="0.0.0.0")
+\ No newline at end of file
++    demo.launch(share=args.share,server_port=args.port,server_name=args.server_name)
+\ No newline at end of file
+diff --git a/openreal2sim/simulation/isaaclab/demo/sim_agent.sh b/openreal2sim/simulation/isaaclab/demo/sim_agent.sh
+index 9d84572..2b824db 100644
+--- a/openreal2sim/simulation/isaaclab/demo/sim_agent.sh
++++ b/openreal2sim/simulation/isaaclab/demo/sim_agent.sh
+@@ -1,11 +1,11 @@
+ #!/usr/bin/env bash
+-#set -euo pipefail
++set -euo pipefail
+ 
+ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ ROOT_DIR="$(cd /app && pwd)"
+ 
+ # Default parameters
+-gpu_id="1"
++gpu_id="${OPENREAL2SIM_GPU_ID:-0}"
+ CONFIG_PATH="${ROOT_DIR}/config/config.yaml"
+ declare -a PIPELINE=()
+ START_IDX=""
